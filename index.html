@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bradesco Seguros Dinâmica</title>
+
+    <!-- CSS -->
+      <link rel="stylesheet" href="stylesheet.css">
+
+    <!-- JS -->
+      <script src="timer.js" charset="utf-8"></script>
+      <script src="core.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="panel">
+
+        <div class="flex flex-center no-decoration">
+          Ícone
+          <h1 class="color-text">Dinâmicas</h1>
+        </div>
+
+        <div class="flex flex-wrap">
+          <div class="flex flex-column width-75 padding-R20">
+            <label class="color-text" for="inputDinamica">Nome da dinâmica</label>
+            <input class="margin-T10" type="text" name="inputDinamica" value="Nome da dinâmica">
+          </div>
+
+          <div class="flex flex-wrap flex-column width-25">
+            <label for="inputTempo">Tempo</label>
+            <input class="margin-T10" type="time" name="inputTempo">
+          </div>
+        </div>
+
+        <div class="flex flex-center no-decoration margin-T20">
+          <div class="width-25 padding-R20">
+              <textarea class="textarea-timer text-big" name="timer" rows="1" cols="5" readonly>00:00</textarea>
+          </div>
+          <progress class="width-75 progress-timer" value="0" max="100">0%</progress>
+        </div>
+
+        <div class="flex no-decoration button-group">
+          <button onclick="oTimer.start();" class="item text-smaller iniciar" type="button" name="iniciar">INICIAR</button>
+          <button onclick="oTimer.hold();" class="item text-smaller pausar" type="button" name="pausar">PAUSAR</button>
+          <button onclick="oTimer.stop();" class="item text-smaller parar" type="button" name="parar">PARAR</button>          
+        </div>
+
+        <table class="list-dinamica margin-T20">
+          <tr class="list-header">
+           <th class="item" align="left">#</th>
+           <th class="item" align="left">Dinâmica</th>
+           <th class="item" align="right">Duração</th>
+          </tr>
+          <!-- <tr class="list-item">
+            <td class="item color-text">1</td>
+            <td class="item color-text">2</td>
+            <td align="right" class="item color-text">50:00</td>
+          </tr> -->
+        </table>
+
+      </div>
+    </div>
+  </body>
+</html>

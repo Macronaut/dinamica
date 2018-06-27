@@ -1,0 +1,128 @@
+/* -- HELPERS --*/
+  .no-decoration { list-style-type: none; }
+  .flex-column { flex-direction: column; }
+  .flex-center { align-items: center; }
+  .width-75 { width: 75%; }
+  .width-50 { width: 50%; }
+  .width-25 { width: 25%; }
+
+  .flex {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
+  /* -- FONT SIZES -- */
+    .text-smaller { font-size: 12px;}
+    .text-small { font-size: 14px; }
+    .text-medium { font-size: 16px; }
+    .text-big { font-size: 45px; }
+
+  /* -- COLORS --*/
+    .color-text { color: #373A3C; }
+
+  /* -- MARGINS & PADDINGS -- */
+    .margin-T20 { margin-top: 20px }
+    .margin-T10 { margin-top: 10px }
+
+    .padding-R20 {
+      box-sizing: border-box;
+      padding-right: 20px;
+    }
+
+/* -- HELPERS -- */
+
+/* -- CSS -- */
+
+  .container {
+    position: absolute;
+    background: #888;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .panel {
+    padding: 10px 50px 50px 50px;
+    box-sizing: border-box;
+    margin: 20px auto;
+    background: #FFF;
+    min-height: 90%;
+    max-width: 55%;
+  }
+
+  /* -- BUTTON GROUP -- */
+    .button-group .item:not(:last-child) { margin-right: 5px; }
+    .button-group { margin-top: 25px; }
+
+    .button-group .item:disabled {
+      pointer-events: none;
+      opacity: .5;
+    }
+
+    .button-group .item.registrar:active { background: #032e52; }
+    .button-group .item.iniciar:active { background: #245424; }
+    .button-group .item.pausar:active { background: #774e05; }
+    .button-group .item.parar:active { background: #791914; }
+
+    .button-group .item.registrar { background: #01549B; }
+    .button-group .item.iniciar { background: #449D44; }
+    .button-group .item.pausar { background: #EE9800; }
+    .button-group .item.parar { background: #CB2E25; }
+
+    .button-group .item {
+      border-radius: 5px;
+      font-weight: bold;
+      min-height: 30px;
+      cursor: pointer;
+      min-width: 90px;
+      border: none;
+      color: #FFF;
+    }
+
+  /* -- TIMER GROUP -- */
+
+    .progress-timer::-webkit-progress-value { background-color: #5CB85C; }
+    .progress-timer::-webkit-progress-bar { background-color: #ECEEEF; }
+
+    .progress-timer::-moz-progress-value { background-color: #5CB85C; }
+    .progress-timer::-moz-progress-bar { background-color: #ECEEEF; }
+
+    .progress-timer {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      min-height: 17px;
+      color: #5CB85C;
+    }
+
+    .textarea-timer {
+      text-align: center;
+      color: #5CB85C;
+      resize: none;
+      width: 100%;
+    }
+
+    [name = "inputDinamica"],
+    [name = "inputTempo" ] {
+      min-height: 35px;
+      color: #818A91;
+      padding: 5px;
+    }
+
+  /* -- TABLE GROUP -- */
+
+  .list-dinamica .list-item:not(:last-child) { border-bottom: 1px solid #DDDDDD; }
+  .list-dinamica .list-header .item { padding: 10px 20px; }
+  .list-dinamica .list-item .item { padding: 5px 20px; }
+
+  .list-dinamica {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .list-dinamica .list-header {
+    background: #373A3C;
+    color: #FFF;
+  }
+/* -- CSS -- */
