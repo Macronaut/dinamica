@@ -11,6 +11,8 @@
     display: flex;
   }
 
+  .no-resize { resize: none; }
+
   /* -- FONT SIZES -- */
     .text-smaller { font-size: 12px;}
     .text-small { font-size: 14px; }
@@ -36,7 +38,7 @@
   .container {
     position: absolute;
     background: #888;
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     left: 0;
     top: 0;
@@ -48,7 +50,7 @@
     margin: 20px auto;
     background: #FFF;
     min-height: 90%;
-    max-width: 55%;
+    max-width: 70%;
   }
 
   /* -- BUTTON GROUP -- */
@@ -96,10 +98,18 @@
       color: #5CB85C;
     }
 
-    .textarea-timer {
+    .textarea-tempo {
+      padding-left: 10px;     
+      line-height: 43px;
+      color: #818A91;
+      min-height: 43px;
+      font-size: 30px;      
+    }
+
+    .textarea-timer {      
       text-align: center;
-      color: #5CB85C;
-      resize: none;
+      overflow: hidden;
+      color: #5CB85C;      
       width: 100%;
     }
 

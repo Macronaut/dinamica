@@ -1,0 +1,3 @@
+--- PENDÊNCIAS ---
+
+- Inserir setas para controlar horário para mais ou para menos;
