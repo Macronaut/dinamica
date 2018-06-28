@@ -5,7 +5,7 @@ function classTimer(p_DOMCounter) {
   if(localStorage.getItem("strSave")){ strSave = localStorage.getItem("strSave"); } 
   else { strSave = ""; }
 
-  if(strSave != "") document.querySelector('.list-dinamica tbody').innerHTML += strSave;
+  if(strSave) document.querySelector('.list-dinamica tbody').innerHTML += strSave;
     
   numDiffMinutes = 0;
   numDiffSeconds = 0;  
