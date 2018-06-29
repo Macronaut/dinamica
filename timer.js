@@ -2,6 +2,7 @@ function classTimer(p_DOMCounter) {
   this.numCounter = p_DOMCounter.value;
   this.DOMCounter = p_DOMCounter;
   this.update = this.update;
+  
   if(localStorage.getItem("strSave")){ strSave = localStorage.getItem("strSave"); } 
   else { strSave = ""; }
 
