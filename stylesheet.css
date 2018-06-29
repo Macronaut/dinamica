@@ -1,10 +1,12 @@
 /* -- HELPERS --*/
-  .no-decoration { list-style-type: none; }
-  .flex-column { flex-direction: column; }
+  .no-decoration { list-style-type: none; }  
+  .flex-column { flex-direction: column; }  
   .flex-center { align-items: center; }
   .width-75 { width: 75%; }
   .width-50 { width: 50%; }
   .width-25 { width: 25%; }
+  .width-20 { width: 20%; }
+  .width-5 { width: 5%; }
 
   .flex {
     flex-wrap: wrap;
@@ -49,7 +51,7 @@
     box-sizing: border-box;
     margin: 20px auto;
     background: #FFF;
-    min-width: 550px;
+    min-width: 580px;
     min-height: 90%;
     max-width: 70%;    
   }
@@ -100,25 +102,27 @@
     }
 
     .textarea-tempo {
-      padding-left: 10px;     
+      padding-left: 10px;
       line-height: 43px;
       color: #818A91;
       min-height: 43px;
-      font-size: 30px;      
+      font-size: 30px;
+      width: 90%;
     }
 
-    .textarea-timer {      
+    .textarea-timer {
       text-align: center;
       overflow: hidden;
-      color: #5CB85C;      
+      color: #5CB85C;
       width: 100%;
     }
 
     [name = "inputDinamica"],
-    [name = "inputTempo" ] {
+    [name = "inputTempo" ] {      
       min-height: 35px;
-      color: #818A91;
+      color: #818A91;      
       padding: 5px;
+      width: 97%;
     }
 
   /* -- TABLE GROUP -- */
@@ -136,4 +140,35 @@
     background: #373A3C;
     color: #FFF;
   }
+
+  /* -- ARROW GROUP --  */
+
+  .arrow-group { padding-top: 29px; }  
+
+  .arrow-group .raise::before {
+    content: "\21E7";
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    color: #000;
+    height: 30px;
+    width: 12px;
+  }
+
+  .arrow-group .decrease::before {
+    content: "\21E9";
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    color: #000;
+    height: 38px;
+    width: 12px;
+  }
+
+  .arrow-group .raise.disabled,
+  .arrow-group .decrease.disabled {
+    pointer-events: none;
+    opacity: .25;
+  }
+  
 /* -- CSS -- */

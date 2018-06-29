@@ -70,6 +70,9 @@ classTimer.prototype.start = function() {
   document.querySelector('[name="inputDinamica"]').disabled = true;
   document.querySelector('.textarea-tempo').disabled = true;
 
+  document.querySelector('.arrow-group .decrease').classList.add('disabled');
+  document.querySelector('.arrow-group .raise').classList.add('disabled');
+
   var numMinToSec = strTotal.split(':')[0] * 60,
   numSec = strTotal.split(':')[1],
   numProgressMax = Number(numMinToSec) + Number(numSec);
@@ -157,7 +160,45 @@ classTimer.prototype.stop = function(p_Pausar) {
 
   document.querySelector('.pausar').disabled = true;
   document.querySelector('.iniciar').disabled = false;
-  document.querySelector('.parar').disabled = true;  
+  document.querySelector('.parar').disabled = true;
+
+  document.querySelector('.arrow-group .decrease').classList.remove('disabled');
+  document.querySelector('.arrow-group .raise').classList.remove('disabled');
 
   delete strDinamica;  
+}
+
+classTimer.prototype.manageTime = function(p_oButton){
+  var strAction = p_oButton.getAttribute('data-action'),
+  inputCounter = document.querySelector('.textarea-timer'),
+  inputTime = document.querySelector('.textarea-tempo'),  
+  numMinutes = Number(inputTime.value.split(':')[0]),
+  numSeconds = Number(inputTime.value.split(':')[1]);  
+  
+
+  switch(strAction) {
+    case "raise":
+      if(numSeconds < 59) { numSeconds++; } 
+      else {
+        numSeconds = 0;
+        numMinutes++;        
+      }
+    break;
+    case "decrease":
+     if(numSeconds > 0){
+      numSeconds--;
+     } else {      
+      if(numMinutes > 0){
+        numMinutes--;
+        numSeconds = 59;
+      }
+     }
+    break;    
+  }
+
+  if(numMinutes.toString().length <=1 ) numMinutes = "0" + numMinutes;
+  if(numSeconds.toString().length <=1 ) numSeconds = "0" + numSeconds;
+    
+  inputTime.value = numMinutes + ":" + numSeconds;
+  inputCounter.value = numMinutes + ":" + numSeconds;
 }
