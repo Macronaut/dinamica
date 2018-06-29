@@ -131,9 +131,9 @@ classTimer.prototype.stop = function(p_Pausar) {
   var numChildren = document.querySelector('.list-dinamica tbody').children.length;
 
   var strHTML = '<tr class="list-item">'
-  +  '<td class="item color-text">'+ numChildren +'</td>'
-  +  '<td class="item color-text">'+ strDinamica +'</td>'
-  +  '<td align="right" class="item color-text">'+ strDuracao +'</td>'
+  +  '<td class="item montserrat-regular color-text">'+ numChildren +'</td>'
+  +  '<td class="item montserrat-regular color-text">'+ strDinamica +'</td>'
+  +  '<td align="right" class="item montserrat-regular color-text">'+ strDuracao +'</td>'
   + '</tr>';
     
   loopInterval = undefined;  

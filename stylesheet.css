@@ -1,4 +1,46 @@
-/* -- HELPERS --*/
+/* -- FONTS -- */
+@font-face {
+  font-family: "bradesco";
+  src: url("fonts/bradesco.eot"), url("fonts/bradesco.eot#iefix") format("embedded-opentype"), url("fonts/bradesco.ttf") format("truetype"), url("fonts/bradesco.woff") format("woff"), url("fonts/bradesco.woff2") format("woff2"), url("fonts/bradesco.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat-regular";
+  src: url("fonts/montserrat-regular.eot"), url("fonts/montserrat-regular.eot#iefix") format("embedded-opentype"), url("fonts/montserrat-regular.ttf") format("truetype"), url("fonts/montserrat-regular.woff") format("woff"), url("fonts/montserrat-regular.woff2") format("woff2"), url("fonts/montserrat-regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat-medium";
+  src: url("fonts/montserrat-medium.eot"), url("fonts/montserrat-medium.eot#iefix") format("embedded-opentype"), url("fonts/montserrat-medium.ttf") format("truetype"), url("fonts/montserrat-medium.woff") format("woff"), url("fonts/montserrat-medium.woff2") format("woff2"), url("fonts/montserrat-medium.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat-semibold";
+  src: url("fonts/montserrat-semibold.eot"), url("fonts/montserrat-semibold.eot#iefix") format("embedded-opentype"), url("fonts/montserrat-semibold.ttf") format("truetype"), url("fonts/montserrat-semibold.woff") format("woff"), url("fonts/montserrat-semibold.woff2") format("woff2"), url("fonts/montserrat-semibold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserrat-bold";
+  src: url("fonts/montserrat-bold.eot"), url("fonts/montserrat-bold.eot#iefix") format("embedded-opentype"), url("fonts/montserrat-bold.ttf") format("truetype"), url("fonts/montserrat-bold.woff") format("woff"), url("fonts/montserrat-bold.woff2") format("woff2"), url("fonts/montserrat-bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bradesco { font-family: "bradesco"; }
+.montserrat-regular { font-family: "montserrat-regular";}
+.montserrat-medium { font-family: "montserrat-medium"; }
+.montserrat-semibold { font-family: "montserrat-semibold"; }
+.montserrat-bold { font-family: "montserrat-bold"; }
+
+/* -- HELPERS -- */
   .no-decoration { list-style-type: none; }  
   .flex-column { flex-direction: column; }  
   .flex-center { align-items: center; }
@@ -22,16 +64,19 @@
     .text-big { font-size: 45px; }
 
   /* -- COLORS --*/
-    .color-text { color: #373A3C; }
+    .color-text { color: #707070; }
 
   /* -- MARGINS & PADDINGS -- */
     .margin-T20 { margin-top: 20px }
     .margin-T10 { margin-top: 10px }
 
-    .padding-R20 {
+    .padding-R10,
+    .padding-R20{
       box-sizing: border-box;
-      padding-right: 20px;
     }
+
+    .padding-R10 { padding-right: 10px; }
+    .padding-R20 { padding-right: 20px; }    
 
 /* -- HELPERS -- */
 
@@ -39,19 +84,20 @@
 
   .container {
     position: absolute;
-    background: #888;
+    background: url(http://4.bp.blogspot.com/-BdFXD3_MEhk/VGjZI2J8ShI/AAAAAAAAAXo/cYZRLM6K_BI/s1600/LondonSept%2B011.JPG);
     min-height: 100%;
     width: 100%;
     left: 0;
     top: 0;
   }
 
-  .panel {
+  .panel {    
     padding: 10px 50px 50px 50px;
+    border: 1px solid #707070;
     box-sizing: border-box;
     margin: 20px auto;
     background: #FFF;
-    min-width: 580px;
+    min-width: 650px;
     min-height: 90%;
     max-width: 70%;    
   }
@@ -76,7 +122,7 @@
     .button-group .item.parar { background: #CB2E25; }
 
     .button-group .item {
-      border-radius: 5px;
+      border-radius: 3px;
       font-weight: bold;
       min-height: 30px;
       cursor: pointer;
@@ -102,6 +148,7 @@
     }
 
     .textarea-tempo {
+      border: 1px solid #DDDDDD;
       padding-left: 10px;
       line-height: 43px;
       color: #818A91;
@@ -111,14 +158,17 @@
     }
 
     .textarea-timer {
+      border: 1px solid #DDDDDD;  
       text-align: center;
+      font-weight: bold;
       overflow: hidden;
       color: #5CB85C;
       width: 100%;
     }
 
     [name = "inputDinamica"],
-    [name = "inputTempo" ] {      
+    [name = "inputTempo" ] {
+      border: 1px solid #DDDDDD;
       min-height: 35px;
       color: #818A91;      
       padding: 5px;
@@ -143,26 +193,42 @@
 
   /* -- ARROW GROUP --  */
 
-  .arrow-group { padding-top: 29px; }  
+  .arrow-group { padding-top: 35px; }  
 
   .arrow-group .raise::before {
-    content: "\21E7";
+    font-family: 'bradesco';
+    content: "";
     cursor: pointer;
     display: block;
     margin: 0 auto;
     color: #000;
-    height: 30px;
+    height: 15px;
     width: 12px;
   }
 
   .arrow-group .decrease::before {
-    content: "\21E9";
+    font-family: 'bradesco';
+    content: "";
     cursor: pointer;
     display: block;
     margin: 0 auto;
     color: #000;
-    height: 38px;
+    height: 24px;
     width: 12px;
+  }
+
+  .arrow-group .raise::before,
+  .arrow-group .decrease::before {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  .arrow-group .raise:active::before,
+  .arrow-group .decrease:active::before{
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    transform: scale(.8);
   }
 
   .arrow-group .raise.disabled,

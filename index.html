@@ -17,19 +17,19 @@
       <div class="panel">
 
         <div class="flex flex-center no-decoration">
-          Ícone
-          <h1 class="color-text">Dinâmicas</h1>
+          <img class="dinamica-logo padding-R10" src="media/logo.PNG" alt="Logo">
+          <h1 class="color-text montserrat-bold">Dinâmicas</h1>
         </div>
 
         <div class="flex flex-wrap">
           <div class="flex flex-column width-75 padding-R20">
-            <label class="color-text" for="inputDinamica">Nome da dinâmica</label>
-            <input class="margin-T10" type="text" name="inputDinamica" value="Nome da dinâmica">
+            <label class="color-text montserrat-medium" for="inputDinamica">Nome da dinâmica</label>
+            <input class="margin-T10 montserrat-medium" type="text" name="inputDinamica" value="Nome da dinâmica">
           </div>
 
           <div class="flex flex-wrap flex-column width-20">
-            <label for="inputTempo">Tempo</label>
-            <input type="text" class="textarea-tempo margin-T10 no-resize" name="timer" value="00:00"></input>            
+            <label class="montserrat-medium" for="inputTempo">Tempo</label>
+            <input type="text" class="textarea-tempo montserrat-medium margin-T10 no-resize" name="timer" value="00:00"></input>            
           </div>
 
           <div class="arrow-group flex flex-column width-5">
@@ -40,22 +40,22 @@
 
         <div class="flex flex-center no-decoration margin-T20">
           <div class="width-50 padding-R20">
-              <textarea class="textarea-timer text-big no-resize" name="timer" rows="1" readonly>00:00</textarea>
+              <textarea class="textarea-timer text-big no-resize montserrat-bold" name="timer" rows="1" readonly>00:00</textarea>
           </div>
           <progress class="width-50 progress-timer" value="0" max="100">0%</progress>
         </div>
 
         <div class="flex no-decoration button-group">
-          <button onclick="oTimer.start();" class="item text-smaller iniciar" type="button" name="iniciar">INICIAR</button>
-          <button onclick="oTimer.hold();" class="item text-smaller pausar" type="button" name="pausar">PAUSAR</button>
-          <button onclick="oTimer.stop(this);" class="item text-smaller parar" type="button" name="parar">PARAR</button>          
+          <button onclick="oTimer.start();" class="item montserrat-regular text-smaller iniciar" type="button" name="iniciar">INICIAR</button>
+          <button onclick="oTimer.hold();" class="item montserrat-regular text-smaller pausar" type="button" name="pausar">PAUSAR</button>
+          <button onclick="oTimer.stop(this);" class="item montserrat-regular text-smaller parar" type="button" name="parar">PARAR</button>          
         </div>
 
         <table class="list-dinamica margin-T20">
           <tr class="list-header">
-           <th class="item" align="left">#</th>
-           <th class="item" align="left">Dinâmica</th>
-           <th class="item" align="right">Duração</th>
+           <th class="item montserrat-regular" align="left">#</th>
+           <th class="item montserrat-regular" align="left">Dinâmica</th>
+           <th class="item montserrat-regular" align="right">Duração</th>
           </tr>          
         </table>
 
