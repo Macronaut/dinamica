@@ -113,7 +113,7 @@ classTimer.prototype.hold = function() {
   }
 }
 
-classTimer.prototype.stop = function(p_Pausar) {
+classTimer.prototype.stop = function() {
   document.querySelector('.iniciar').disabled = false;
   clearInterval(loopInterval);
 
@@ -122,7 +122,9 @@ classTimer.prototype.stop = function(p_Pausar) {
   numMinutes = numCounter.split(':')[0],
   numSeconds = numCounter.split(':')[1];
   
-  if(!p_Pausar) numDiffSeconds--;
+  if(Number(document.querySelector('.textarea-tempo').value.split(':')[0]) < 1) numDiffSeconds--;
+
+  if(numDiffSeconds < 1) { numDiffSeconds = 0; }
   
   var numDuracaoMinutes = numDiffMinutes.toString().length <= 1 ? ("0" + numDiffMinutes) : numDiffMinutes,
   numDuracaoSeconds = numDiffSeconds.toString().length <= 1 ? ("0" + numDiffSeconds) : numDiffSeconds,
